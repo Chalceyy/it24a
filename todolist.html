@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+            color:green;
+        }
+    </style>
 </head>
 <body>
     <h1>To Do List</h1>
@@ -11,11 +17,18 @@
             id = "taskinput"
             placeholder = "add a task"
     />
-    <button oneclick = "addTask"> Add </button>
+    <button onclick = "addTask()"> Add </button>
+    <ul id="tasklist">Your task goes here</ul>
     
     <script>
         function addTask(){
              getTaskText();
+             const Tasktext = getTaskText();
+             if (taskText){
+                addTaskItem(tastText);
+             }else{
+                console.log("No task entered");
+             }
         }
         function getTaskText(){
             var taskinput = document.getElementById ('taskinput');
