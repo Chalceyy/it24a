@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <input type="text"
+            id = "taskinput"
+            placeholder = "add a task"
+    />
+    <button onclick = "addTask()"> Add </button>
+    <ul id="tasklist">Your task goes here</ul>
+    
+    <script>
+        function addTask(){
+             getTaskText();
+             const Tasktext = getTaskText();
+             if (taskText){
+                addTaskItem(tastText);
+             }else{
+                console.log("No task entered");
+             }
+        }
+        function getTaskText(){
+            const input = document.getElementsById('taskInput');
+            const text = input.value.trim();
+        
+        taskSpan.textContent = taskText;
+        const editBtn = createEditBtn(li.taskSpan);
+        li.appendChild(editBtn)
+
+        }
+
+    function createDeleteBtn(li) {
+        const deleteBtn = document.createElement("botton");
+
+        deleteBtn.textContent="X";
+        deleteBtn.className="delete-btn";
+        deleteBtn.style.marginLeft="8px";
+        deleteBtn.style.backgroundColor = "#FF0000";
+        deleteBtn.onclick=()=> handleDeleteClick(li);
+
+        console.log("createDeleteButton() called ->", li.textContent);
+        return deleteBtn;
+    
+    }
+
+    function handleDeleteClick(li){
+        li.remove();
+        console.log("handleDeleteClick() called ->", li.textContent.replace("X","").trim,Date());
+}
+    function createEditBtn(li, taskSpan){
+        const editbtn = document.createElement("Button");
+        editbtn.textContent = "Edit";
+        editbtn.className = "edit-btn";
+        editbtn.style.marginLeft = "8px";
+
+    }
+
+    function createDoneButton (taskSpan){
+        const doneBtn = document.createElement ("button");
+        doneBtn.textContent = "Done";
+        doneBtn.onclick = () => {
+            const li=taskSpan.parentElement;
+
+            taskSpan.classList.add("done");
+
+            const buttons = li.querySelectorAll("buttons");
+            buttons.forEach(btn=>btn.remove());
+            console.log ("Task complete", taskSpan.textContent, Date());
+            }
+            return doneBtn;
+    
+        }
+
+    function createDeleteBtn(li) {
+        const deleteBtn = document.createElement("button");
+
+        deleteBtn.textContent="X";
+        deleteBtn.className="delete-btn";
+        deleteBtn.style.marginLeft="8px";
+        deleteBtn.style.backgroundColor = "#FF0000"
+        deleteBtn.onclick=()=> handleDeleteClick(li);
+
+        console.log("createDeleteButon() called")
+    }
+        
+    </script>
+    
+</body>
+</html>
