@@ -1,0 +1,20 @@
+[
+    {
+    "name": "ICS laboratory 1",
+    "title" : "ICS Lab 1",
+    "description" : "Computer Lab",
+    "img" : "https://media.tenor.com/mtiOW6O-k8YAAAAM/shrek-shrek-rizz.gif",
+    "lat" : 8.3594, 
+    "lng": 124.8690,
+    "locationType": "Laboratory"
+    },
+    {
+    "name": "CC",
+    "title" : "Northern Bukidnon State College Grounds",
+    "description" : "Covered court",
+    "img" : "https://i.pinimg.com/originals/88/7b/8b/887b8b300f73b10f611e43f03a3dfa25.gif",
+    "lat" : 8.359990848061994, 
+    "lng": 124.8688520443871,
+    "locationType": "Others"
+    }
+]
